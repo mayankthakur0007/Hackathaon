@@ -35,10 +35,6 @@ else if(bombDir=='DR')
     X0=X0+1;
      Y0=Y0-1;
 }
-else if(bombDir=='R')
-{
-     X0=X0-1;
-}
 else if(bombDir=='D')
 {
     if(H>70)
