@@ -47,12 +47,18 @@ var MyInput = class extends HTMLElement {
       let inputValue = this.inputEl.value;
       let inputCharacters = inputValue.split('');
       let characterCount = 0;
+/**@description For checking whether one special characters among the given characters is present or not
+*@author Mayank Pratap Singh
+ */
       for (let i = 0; i < inputCharacters.length; i++) {
 
         if (inputCharacters[i] == '!' || inputCharacters[i] == '@' || inputCharacters[i] == '#' || inputCharacters[i] == '&' || inputCharacters[i] == '*') {
           characterCount++;
         }
       }
+/** @description for checking characters and max.2 consecutive number
+*@author Mayank Pratap Singh
+*/
       if (/[^@#&!*a-zA-Z0-9]/.test(this.inputEl.value) || characterCount == 0 || /(?=(\d{3}))/.test(this.inputEl.value))
         return false;
     }
